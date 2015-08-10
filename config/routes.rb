@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :pins #this one route created many routes (show, edit, destroy, new pin) - backbone of most things happening within in application - it is called a resource
+  #resource - CRUD - create, read, update, destroy
   devise_for :users
   root "pages#home"
   get "about" => "pages#about" #creates about_path
